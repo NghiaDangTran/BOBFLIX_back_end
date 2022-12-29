@@ -1,6 +1,7 @@
 # BOBFLIX_back_end
 
-
+# ~~Signed URL~~ 
+Signed Url give us an esay method to stream file but one problem in our case is that we need to read alot of file at once time so that one Signed Url is not enough to do it, we can walk around this by change all of our m3u8 script into a short term signed, but it will slow the time to load it.
 private key: download openssl
 <br>
 run this command with admin in cmd
