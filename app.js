@@ -51,17 +51,17 @@ app.use('/api/v1/cookies', cookiesRouter)
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
-const key = process.env.LOCAL_PRIVATE
-const cert = process.env.LOCAL_PUBLIC
+// const key = process.env.LOCAL_PRIVATE
+// const cert = process.env.LOCAL_PUBLIC
 
 const port = process.env.PORT || 443;
-const https = require('https');
-const server = https.createServer({ key, cert }, app);
+// const https = require('https');
+// const server = https.createServer({ key, cert }, app);
 const start = async () => {
   try {
     console.log(process.env.MONGO_URL)
     await connectDB(process.env.MONGO_URL);
-    server.listen(port, () =>
+    app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
     );
   } catch (error) {
